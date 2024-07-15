@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* tüm öğeleri kapsaması için * kullanılır */
+
+html {
+    font-size: 7px;
+}
+
+/* tüm öğeler */
+
+img {
+    max-width: 100%;
+    /* resmin max genişliğine kadar büyütür,çözünürlüğü düşmez */
+    height: auto;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.6rem;
+    color: black;
+    /* font-size ezildi,varsayılan değer 1.6 ile çarpıldı,10*1.6 oldu,direkt 16 px yazmak statik olur */
+    line-height: 1.5;
+    text-align: center;
+    background-color: #2d2b2b;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    padding: 1.6rem 0;
+    /* font-size da rem değeri 10 girildi  */
+}
+
+header {
+    height: 46rem;
+    /* header yüksekliği */
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header .bg-image {
+    position: absolute;
+    background-image: url(bg3.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 46rem;
+    width: 100%;
+    z-index: -1;
+}
+
+header h1 {
+    padding: 12rem;
+    padding-bottom: 0;
+}
+
+.btn {
+    display: inline;
+    background-color: #5e5e5e;
+    color: white;
+    border: 1px solid #666;
+    padding: 1.6rem 3.2rem;
+    margin: 0.5rem 0;
+    transition: all 0.4s;
+    /*değişiminin yavaş olmasını sağlıyor*/
+}
+
+.btn:hover {
+    background-color: white;
+    color: #666;
+}
+
+#section-a {
+    background-color: rgb(195, 200, 200);
+    color: black;
+    padding: 3.2rem 0;
+}
+
+#section-b {
+    color: white;
+}
+
+#section-b ul {
+    list-style: none;
+}
+
+#section-b li {
+    background-color: #fff;
+    color: #333;
+}
+
+.col-conten {
+    padding: 1.5 rem;
+}
+
+#section-c {
+    background-color: #eaeaea;
+    color: #333;
+    padding: 5rem;
+}
+
+#section-d .box {
+    padding: 5rem;
+    color: white;
+}
+
+#section-d .box:first-child {
+    background-color: darkslategray;
+}
+
+footer {
+    padding: 4rem;
+    background-color: black;
+    color: white;
+}
+
+footer a {
+    color: yellowgreen;
+}
+
+@media screen and (min-width:800px) {
+    html {
+        font-size: 9px;
+    }
+}
+
+/* mobil tasarlayıp sonrasında diğer cihazlar için responsive yaptık bundan dolayı min-width */
+
+@media screen and (min-width:1200px) {
+    html {
+        font-size: 11px;
+    }
+
+    #section-b li {
+        width: 28%;
+        margin: 1%;
+        display: inline-block;
+    }
+
+    .box {
+        width: 50%;
+        float: left;
+    }
+
+}
